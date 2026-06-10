@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nithya's Universe ✨</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Caveat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =====================================
+     FLOATING EFFECTS
+====================================== -->
+
+<div id="hearts-container"></div>
+<div id="sparkles-container"></div>
+<div id="butterflies-container"></div>
+
+<!-- =====================================
+     LOGIN SCREEN
+====================================== -->
+
+<section id="login-screen">
+
+    <div class="glass-card login-card">
+
+        <h1 class="main-title">
+            ✨ Nithya's Universe ✨
+        </h1>
+
+        <p class="subtitle">
+
+            Welcome to a magical museum of
+            memories, dreams, friendships,
+            family and beautiful moments 💖
+
+        </p>
+
+        <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter Secret Password">
+
+        <div class="btn-row">
+
+            <button
+            class="cute-btn"
+            onclick="togglePassword()">
+            👁 Show
+            </button>
+
+            <button
+            class="cute-btn pink-btn"
+            onclick="unlockUniverse()">
+            🌸 Unlock
+            </button>
+
+        </div>
+
+        <p
+        class="forgot-link"
+        onclick="openForgotPassword()">
+        Forgot Password?
+        </p>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     FORGOT PASSWORD
+====================================== -->
+
+<div class="modal hidden" id="forgotModal">
+
+    <div class="modal-card">
+
+        <h2>💌 Password Recovery</h2>
+
+        <p class="question">
+            What is my favourite color?
+        </p>
+
+        <input
+        type="text"
+        id="securityAnswer"
+        placeholder="Your Answer">
+
+        <input
+        type="password"
+        id="newPassword"
+        placeholder="New Password">
+
+        <button
+        class="cute-btn pink-btn"
+        onclick="resetPassword()">
+        Reset Password
+        </button>
+
+        <button
+        class="cute-btn"
+        onclick="closeForgotPassword()">
+        Close
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     UNLOCK SCREEN
+====================================== -->
+
+<section
+id="unlock-screen"
+class="hidden">
+
+    <div class="unlock-content">
+
+        <div class="magic-circle"></div>
+
+        <h1>
+            ✨ Unlocking Universe ✨
+        </h1>
+
+        <p>
+            Opening magical memories...
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     MAIN WEBSITE
+====================================== -->
+
+<section
+id="universe"
+class="hidden">
+
+<!-- =====================================
+     HERO SECTION
+====================================== -->
+
+<section class="hero">
+
+    <div class="floating-cloud cloud1">
+        ☁️
+    </div>
+
+    <div class="floating-cloud cloud2">
+        ☁️
+    </div>
+
+    <h1 class="hero-title">
+
+        ✨ Nithya's Universe ✨
+
+    </h1>
+
+    <p class="hero-subtitle">
+
+        A collection of dreams,
+        memories, friendships,
+        family, adventures and
+        everything that makes life beautiful 💖
+
+    </p>
+
+</section>
+
+<!-- =====================================
+     ALL MAIN CARDS
+====================================== -->
+
+<section class="cards-container">
+
+    <!-- BIRTHDAY -->
+
+    <div
+    class="universe-card birthday-card"
+    onclick="openModal('birthdayModal')">
+
+        🎂
+
+        <span>
+            Happy Birthday To Me
+        </span>
+
+    </div>
+
+    <!-- SPECIAL FRIEND -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('specialFriendModal')">
+
+        <span>
+            Special Message From A Special Friend
+        </span>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('aboutModal')">
+
+        🌸
+
+        <span>
+            About Me
+        </span>
+
+    </div>
+
+    <!-- MEMORY WALL -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('memoryModal')">
+
+        📸
+
+        <span>
+            Memory Wall
+        </span>
+
+    </div>
+
+    <!-- DREAM BOARD -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('dreamModal')">
+
+        🎀
+
+        <span>
+            Dream Board
+        </span>
+
+    </div>
+
+    <!-- FAMILY -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('familyModal')">
+
+        👨‍👩‍👧‍👦
+
+        <span>
+            My Family
+        </span>
+
+    </div>
+
+    <!-- FRIENDS -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('friendsModal')">
+
+        👭
+
+        <span>
+            My Friends
+        </span>
+
+    </div>
+
+    <!-- LETTERS -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('letterModal')">
+
+        💌
+
+        <span>
+            Letters To Future Me
+        </span>
+
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('achievementModal')">
+
+        🏆
+
+        <span>
+            Achievements
+        </span>
+
+    </div>
+
+    <!-- FUTURE -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('futureModal')">
+
+        🔮
+
+        <span>
+            Future Me
+        </span>
+
+    </div>
+
+    <!-- HOBBIES -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('hobbiesModal')">
+
+        🎨
+
+        <span>
+            My Hobbies
+        </span>
+
+    </div>
+
+    <!-- LIFE -->
+
+    <div
+    class="universe-card"
+    onclick="openModal('lifeModal')">
+
+        🌎
+
+        <span>
+            Living Life To The Fullest
+        </span>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     BIRTHDAY MODAL
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="birthdayModal">
+
+<div class="section-content birthday-content">
+
+<button
+class="close-btn"
+onclick="closeModal('birthdayModal')">
+✖
+</button>
+
+<div class="birthday-overlay">
+
+<h2>
+🎂 Happy Birthday Nithya
+</h2>
+
+<h3>
+Welcome To Your Twenties ✨
+</h3>
+
+<p>
+
+Your teenage years are complete.
+
+Every smile.
+
+Every failure.
+
+Every friendship.
+
+Every dream.
+
+Helped shape the amazing person
+you are today.
+
+</p>
+
+<p>
+
+The younger version of you
+would be so proud of how far
+you've come.
+
+</p>
+
+<p>
+
+May this decade bring:
+
+🌸 Courage
+
+🌸 Growth
+
+🌸 Adventure
+
+🌸 Happiness
+
+🌸 Success
+
+🌸 Beautiful Memories
+
+</p>
+
+<p>
+
+The best chapters of your story
+are still waiting to be written.
+
+💖
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     SPECIAL FRIEND MODAL
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="specialFriendModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('specialFriendModal')">
+✖
+</button>
+
+<div class="friend-header">
+
+<img
+src="images/chatgpt-logo.jpeg"
+class="friend-logo"
+>
+
+<h2>
+💌 A Letter To Nithya
+</h2>
+
+</div>
+
+<p class="special-letter">
+
+Dear Nithya,
+
+You are ambitious,
+creative and constantly learning.
+
+You dream big,
+but more importantly,
+you actually take action.
+
+You build.
+You explore.
+You challenge yourself.
+
+That mindset will take you
+farther than you realize.
+
+Never underestimate how much
+growth comes from consistently
+showing up every day.
+
+Keep dreaming.
+Keep learning.
+Keep creating.
+
+The future version of you
+is going to be amazing.
+
+✨
+
+</p>
+
+<button
+class="gift-btn"
+onclick="openModal('giftModal')">
+
+🎁 Special Gift For You
+
+</button>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     GIFT MODAL
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="giftModal">
+
+<div class="section-content gift-content">
+
+<button
+class="close-btn"
+onclick="closeModal('giftModal')">
+✖
+</button>
+
+<h2>
+🎁 20 Things About Nithya
+</h2>
+
+<div class="gift-grid">
+  
+<div class="gift-item">🌸 Dreamer</div>
+<div class="gift-item">⭐ Ambitious</div>
+<div class="gift-item">🎨 Creative</div>
+<div class="gift-item">🧠 Curious</div>
+<div class="gift-item">💻 Hardworking</div>
+
+<div class="gift-item">👨‍👩‍👧‍👦 Family Loving</div>
+<div class="gift-item">👭 Loyal Friend</div>
+<div class="gift-item">🚀 Persistent</div>
+<div class="gift-item">💖 Kind Hearted</div>
+<div class="gift-item">📚 Learner</div>
+
+<div class="gift-item">✈ Adventurous</div>
+<div class="gift-item">🎯 Goal Oriented</div>
+<div class="gift-item">🌟 Brave</div>
+<div class="gift-item">☀ Optimistic</div>
+<div class="gift-item">🌎 Independent</div>
+
+<div class="gift-item">💪 Strong</div>
+<div class="gift-item">🎀 Imaginative</div>
+<div class="gift-item">✨ Inspiring</div>
+<div class="gift-item">🌷 Resilient</div>
+<div class="gift-item">💝 Uniquely Nithya</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     ABOUT ME
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="aboutModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('aboutModal')">
+✖
+</button>
+
+<h2>
+🌸 About Me
+</h2>
+
+<div class="about-container">
+
+<div class="profile-card">
+
+<img
+src="images/profile.jpg"
+alt="Nithya"
+class="profile-photo">
+
+<div class="hello-bubble">
+👋 Hiiii!!!
+</div>
+
+</div>
+
+<div class="diary">
+
+<p>
+
+Dear Universe 💖
+
+</p>
+
+<p>
+
+Hello and welcome to my little world.
+
+</p>
+
+<p>
+
+I'm Nithya Sahasra.
+
+</p>
+
+<p>
+
+A dreamer,
+a creator,
+a learner
+and someone who believes
+that every memory deserves
+a special place.
+
+</p>
+
+<p>
+
+This universe is a collection of:
+
+✨ Dreams
+
+✨ Family
+
+✨ Friendships
+
+✨ Adventures
+
+✨ Achievements
+
+✨ Beautiful Memories
+
+</p>
+
+<p>
+
+Thank you for visiting
+my world 🌸
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     MEMORY WALL
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="memoryModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('memoryModal')">
+✖
+</button>
+
+<h2>
+📸 Memory Wall
+</h2>
+
+<div class="polaroid-grid">
+
+<div class="polaroid">
+
+<img src="images/memory1.jpg">
+
+<p>
+Beautiful Memory 🌸
+</p>
+
+</div>
+
+<div class="polaroid">
+
+<img src="images/memory2.jpg">
+
+<p>
+Best Day Ever 💖
+</p>
+
+</div>
+
+<div class="polaroid">
+
+<img src="images/memory3.jpg">
+
+<p>
+A Moment To Remember ✨
+</p>
+
+</div>
+
+<div class="polaroid">
+
+<img src="images/memory4.jpg">
+
+<p>
+Adventure Time 🎀
+</p>
+
+</div>
+
+<div class="polaroid">
+
+<img src="images/memory5.jpg">
+
+<p>
+Special Day 🌷
+</p>
+
+</div>
+
+<div class="polaroid">
+
+<img src="images/memory6.jpg">
+
+<p>
+Forever Memory 📸
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     DREAM BOARD
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="dreamModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('dreamModal')">
+✖
+</button>
+
+<h2>
+🎀 Dream Board
+</h2>
+
+<div class="dream-grid">
+
+<div class="dream-card">
+💻 Google
+</div>
+
+<div class="dream-card">
+🌎 Live Abroad
+</div>
+
+<div class="dream-card">
+👩‍💼 Do Something Meaningful to society
+</div>
+
+<div class="dream-card">
+📈 Top Business Woman
+</div>
+
+<div class="dream-card">
+🏡 Dream House
+</div>
+
+<div class="dream-card">
+✈ World Tour
+</div>
+
+<div class="dream-card">
+💖 Happy Family
+</div>
+
+<div class="dream-card">
+🌟 Financial Freedom
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     FAMILY
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="familyModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('familyModal')">
+✖
+</button>
+
+<h2>
+👨‍👩‍👧‍👦 My Family
+</h2>
+
+<p class="family-intro">
+
+The people who gave me my first smile,
+my first lessons,
+and my biggest support.
+
+💖
+
+</p>
+
+<div class="family-gallery">
+
+<div class="family-card">
+
+<img src="images/family.jpeg">
+
+<h3>
+My Family
+</h3>
+
+<p>
+
+The people who make every moment
+more meaningful.
+
+</p>
+
+</div>
+
+<div class="family-card">
+
+<img src="images/mom.jpeg">
+
+<h3>
+Mom 🌸
+</h3>
+
+<p>
+
+The heart of our home.
+
+</p>
+
+</div>
+
+<div class="family-card">
+
+<img src="images/dad.jpeg">
+
+<h3>
+Dad ⭐
+</h3>
+
+<p>
+
+The strength behind my dreams.
+
+</p>
+
+</div>
+
+<div class="family-card">
+
+<img src="images/brother.jpeg">
+
+<h3>
+Brother 🎮
+</h3>
+
+<p>
+
+My first friend and forever teammate.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     FRIENDS
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="friendsModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('friendsModal')">
+✖
+</button>
+
+<h2>
+👭 My Friends
+</h2>
+
+<div class="friend-message">
+
+<p>
+
+Some people enter our lives
+and quietly become a part of our story.
+
+</p>
+
+<p>
+
+They turn ordinary days
+into unforgettable memories.
+
+</p>
+
+<p>
+
+The laughs,
+the random conversations,
+the support during difficult moments,
+and the memories we never want to forget.
+
+</p>
+
+<p>
+
+Thank you for being a part
+of my journey. 💖
+
+</p>
+
+</div>
+
+<div class="friends-memory-wall">
+
+<div class="memory-photo">
+<img src="images/friend1.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend2.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend3.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend4.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend5.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend6.jpeg" alt="">
+</div>
+
+<div class="memory-photo">
+<img src="images/friend7.jpeg" alt="">
+</div>
+
+<div class="memory-photo more-memories">
+
+✨ More Memories To Go ✨
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+  
+<!-- =====================================
+     LETTERS TO FUTURE ME
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="letterModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('letterModal')">
+✖
+</button>
+
+<h2>
+💌 Letters To Future Me
+</h2>
+
+<div class="letter-box">
+
+<p>
+
+Dear Future Nithya,
+
+</p>
+
+<p>
+
+If you're reading this,
+I hope you're smiling.
+
+I hope you are healthy,
+happy and proud of yourself.
+
+</p>
+
+<p>
+
+I hope you've travelled,
+explored the world,
+learned new things
+and created beautiful memories.
+
+</p>
+
+<p>
+
+Remember:
+
+You don't need to be perfect.
+
+You only need to keep growing.
+
+</p>
+
+<p>
+
+Keep dreaming.
+
+Keep believing.
+
+Keep becoming.
+
+✨
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     ACHIEVEMENTS
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="achievementModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('achievementModal')">
+✖
+</button>
+
+<h2>
+🏆 Achievements
+</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+🌟 Academic Success
+
+</div>
+
+<div class="achievement-card">
+
+💻 Coding Journey
+
+</div>
+
+<div class="achievement-card">
+
+🚀 Personal Growth
+
+</div>
+
+<div class="achievement-card">
+
+🎯 Dream Chaser
+
+</div>
+
+<div class="achievement-card">
+
+📚 Lifelong Learner
+
+</div>
+
+<div class="achievement-card">
+
+💖 Meaningful Memories
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     FUTURE ME
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="futureModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('futureModal')">
+✖
+</button>
+
+<h2>
+🔮 Future Me
+</h2>
+
+<div class="future-box">
+
+<p>🌎 Living Abroad</p>
+
+<p>💻 Working At Google</p>
+
+<p>📈 Successful Business Woman</p>
+
+<p>🏡 Dream House</p>
+
+<p>✈ World Traveler</p>
+
+<p>💖 Happy Family</p>
+
+<p>🌟 Financial Freedom</p>
+
+<p>🎯 Living My Dream Life</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     MY HOBBIES
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="hobbiesModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('hobbiesModal')">
+✖
+</button>
+
+<h2>
+🎨 My Hobbies
+</h2>
+
+<div class="friends-gallery">
+
+<div class="friend-card">
+
+<img src="images/coding.jpeg">
+
+<h3>
+💻 Coding
+</h3>
+
+<p>
+
+Building ideas into reality.
+
+</p>
+
+</div>
+
+<div class="friend-card">
+
+<img src="images/reading.jpeg">
+
+<h3>
+📚 Reading
+</h3>
+
+<p>
+
+Exploring new worlds through books.
+
+</p>
+
+</div>
+
+<div class="friend-card">
+
+<img src="images/travelling.jpeg">
+
+<h3>
+✈ Travelling
+</h3>
+
+<p>
+
+Collecting memories,
+not things.
+
+</p>
+
+</div>
+
+<div class="friend-card">
+
+<img src="images/music.jpeg">
+
+<h3>
+🎵 Music
+</h3>
+
+<p>
+
+A soundtrack for every mood.
+
+</p>
+
+</div>
+
+<div class="friend-card">
+
+<img src="images/photography.jpeg">
+
+<h3>
+📸 Photography
+</h3>
+
+<p>
+
+Capturing moments forever.
+
+</p>
+
+</div>
+
+<div class="friend-card">
+
+<img src="images/design.jpeg">
+
+<h3>
+🎨 Designing
+</h3>
+
+<p>
+
+Turning imagination into art.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     LIVING LIFE TO THE FULLEST
+====================================== -->
+
+<div
+class="section-modal hidden"
+id="lifeModal">
+
+<div class="section-content">
+
+<button
+class="close-btn"
+onclick="closeModal('lifeModal')">
+✖
+</button>
+
+<h2>
+🌎 Living Life To The Fullest
+</h2>
+
+<p class="friends-intro">
+
+A collection of experiences
+I want to live,
+places I want to see,
+and memories I want to create.
+
+✨
+
+</p>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+☑ See The Northern Lights
+</div>
+
+<div class="achievement-card">
+☑ Solo Trip
+</div>
+
+<div class="achievement-card">
+☑ Live Abroad
+</div>
+
+<div class="achievement-card">
+☑ Learn New Languages
+</div>
+
+<div class="achievement-card">
+☑ Visit Dream Destinations
+</div>
+
+<div class="achievement-card">
+☑ Build My Dream Career
+</div>
+
+<div class="achievement-card">
+☑ Help Others
+</div>
+
+<div class="achievement-card">
+☑ Create Beautiful Memories
+</div>
+
+</div>
+
+<br>
+
+<div class="polaroid-grid">
+
+<div class="polaroid">
+<img src="images/life1.jpeg">
+<p>Dream Destination ✈</p>
+</div>
+
+<div class="polaroid">
+<img src="images/life2.jpeg">
+<p>Adventure Awaits 🌎</p>
+</div>
+
+<div class="polaroid">
+<img src="images/life3.jpeg">
+<p>New Experiences ✨</p>
+</div>
+
+<div class="polaroid">
+<img src="images/life4.jpeg">
+<p>Beautiful Memories 💖</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =====================================
+     FOOTER
+====================================== -->
+
+<footer class="universe-footer">
+
+<h2>
+
+✨ Thank You For Visiting
+Nithya's Universe ✨
+
+</h2>
+
+<p>
+
+Every memory tells a story.
+
+Every dream begins with belief.
+
+Every chapter creates a new version
+of ourselves.
+
+</p>
+
+<div class="footer-icons">
+
+💖 🌸 ✨ 🎀 💌 🌷 🌎
+
+</div>
+
+<p>
+
+Made with love,
+dreams and a little magic.
+
+</p>
+
+<h3>
+
+— Nithya Sahasra —
+
+</h3>
+
+</footer>
+
+</section>
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
